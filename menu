@@ -1,0 +1,104 @@
+package Muni;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+//import java.util.Scanner;
+
+public class Menu {
+
+	public static void main(String[] args) throws IOException {
+		List<Pessoa> listaPessoas = new ArrayList<Pessoa>();
+		Cadastro test = new Cadastro();
+		while(true) {
+		System.out.print("Escolha alguma das opções \n Um - Cadastrar \n Dois - Exibir \n Tres - Remover \n Quatro - Sair \n Digite opção desejada por extenso ");
+
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(isr);
+		String digitado = br.readLine();
+		
+	
+		switch (digitado) {
+		case "um":
+			Pessoa novaPessoa = new Pessoa();
+			Eleitor novoeleitor = new Eleitor();
+			Local novoloc = new Local();
+			Diversos dive = new Diversos();
+			Profissional prof = new Profissional();
+			try
+		    {
+				novaPessoa.setNome(test.leiaCampo("nome"));
+				novaPessoa.setRG(test.leiaCampo("RG"));
+				novaPessoa.setCPF(test.leiaCampo("CPF"));
+				novaPessoa.setEmissor(test.leiaCampo("EMISSOR"));
+				novaPessoa.setUF(test.leiaCampo("UF"));
+				novoeleitor.setSecao(test.leiaCampo("Seção"));
+				novoeleitor.setTitulo(test.leiaCampo("Titulo"));
+				novoeleitor.setZona(test.leiaCampo("Zona"));
+				novoloc.setBairro(test.leiaCampo("Bairro"));
+				novoloc.setRua(test.leiaCampo("RUA"));
+				novoloc.setCep(test.leiaCampo("CEP"));
+				novoloc.setDatachegada(test.leiaCampo("DATA DE CHEGADA"));
+				dive.setClube(test.leiaCampo("CLUBE"));
+				dive.setSindicato(test.leiaCampo("SINDICATO"));
+				dive.setAssociacao(test.leiaCampo("ASSOCIAÇÃO"));
+				dive.setReligiao(test.leiaCampo("RELIGIÃO"));
+				dive.setCupomfiscal(test.leiaCampo("CUPOM FISCAL"));
+				prof.setEscolaridade(test.leiaCampo("ESCOLARIDADE"));
+				prof.setFormação(test.leiaCampo("FORMAÇÃO"));
+				prof.setLocalestudo(test.leiaCampo("LOCAL ESTUDO"));
+				prof.setOcupação(test.leiaCampo("OCUPAÇÃO"));
+				
+				
+				
+				listaPessoas.add(novaPessoa); //Adicionando os dados na lista pessoa
+		    }
+		    catch(NullPointerException e)
+		    {
+		      System.out.println("Ocorreu um NullPointerException ao executar o método () "+e);
+		    }
+			
+		case "dois":
+			String cpfBuscado = test.leiaCampo("CPF");
+			try
+		    {
+				
+				for (int i=0; i < listaPessoas.size(); i++) {
+					Pessoa p = listaPessoas.get(i);
+					if (cpfBuscado.equals(p.getCPF())) { //se  o cpfbuscado é igual o cpf da lista 
+						System.out.println(p); // vai mostrar a lista que corresponderá ao cpf desejado
+					}
+				}
+		    }
+		    catch(NullPointerException e)
+		    {
+		      System.out.println("Ocorreu um NullPointerException ao executar o método () "+e);
+		    }
+			
+		case "tres":
+			
+			try
+		    {
+				cpfBuscado = test.leiaCampo("CPF");
+				for (int i=0; i < listaPessoas.size(); i++) {
+					Pessoa p = listaPessoas.get(i);
+					if (cpfBuscado.equals(p.getCPF())) { //se  o cpfbuscado é igual o cpf da lista 
+						listaPessoas.remove(p);
+					}
+				}
+		    }
+		    catch(NullPointerException e)
+		    {
+		      System.out.println("Ocorreu um NullPointerException ao executar o método () "+e);
+		    }
+		case "quatro":
+			System.out.println("Saindo do programa obrigado por utilizar!");
+			System.exit(0);
+		
+		}
+		
+	  }
+		
+	}
+}
