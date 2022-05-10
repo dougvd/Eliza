@@ -1,0 +1,41 @@
+package Muni;
+
+public class Diversos {
+
+	String religiao;
+	String clube;
+	String sindicato;
+	String associacao;
+	String cupomfiscal;
+	
+	public String getReligiao() {
+		return religiao;
+	}
+	public void setReligiao(String religiao) {
+		this.religiao = religiao;
+	}
+	public String getClube() {
+		return clube;
+	}
+	public void setClube(String clube) {
+		this.clube = clube;
+	}
+	public String getSindicato() {
+		return sindicato;
+	}
+	public void setSindicato(String sindicato) {
+		this.sindicato = sindicato;
+	}
+	public String getAssociacao() {
+		return associacao;
+	}
+	public void setAssociacao(String associacao) {
+		this.associacao = associacao;
+	}
+	public String getCupomfiscal() {
+		return cupomfiscal;
+	}
+	public void setCupomfiscal(String cupomfiscal) {
+		this.cupomfiscal = cupomfiscal;
+	}
+}
