@@ -1,0 +1,28 @@
+package Muni;
+public class Eleitor {
+
+	String titulo;
+	String secao;
+	String zona;
+	
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public String getSecao() {
+		return secao;
+	}
+	public void setSecao(String secao) {
+		this.secao = secao;
+	}
+	public String getZona() {
+		return zona;
+	}
+	public void setZona(String zona) {
+		this.zona = zona;
+	}
+	
+	
+}
