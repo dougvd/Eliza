@@ -1,0 +1,84 @@
+package Muni;
+
+public class Pessoa {
+
+	String nome;
+	String CPF;
+	String RG;
+	String emissor;
+	String UF;
+	String nasc;
+	String naturalidade;
+	String nacionalidade;
+
+	
+	@Override
+	public String toString() {
+		return nome+CPF+RG;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
+
+	public String getRG() {
+		return RG;
+	}
+
+	public void setRG(String rG) {
+		RG = rG;
+	}
+
+	public String getEmissor() {
+		return emissor;
+	}
+
+	public void setEmissor(String emissor) {
+		this.emissor = emissor;
+	}
+
+	public String getUF() {
+		return UF;
+	}
+
+	public void setUF(String uF) {
+		UF = uF;
+	}
+
+	public String getNasc() {
+		return nasc;
+	}
+
+	public void setNasc(String nasc) {
+		this.nasc = nasc;
+	}
+
+	public String getNaturalidade() {
+		return naturalidade;
+	}
+
+	public void setNaturalidade(String naturalidade) {
+		this.naturalidade = naturalidade;
+	}
+
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+
+}
