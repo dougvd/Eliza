@@ -1,0 +1,23 @@
+package Muni;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Cadastro {
+
+	Pessoa pessoa;
+	Eleitor eleitor;
+	Local local;
+	Diversos diversos;  
+	Profissional profi;
+
+	public String leiaCampo(String campo) throws IOException {
+		System.out.print("Digite o "+campo+": ");
+		InputStreamReader isr = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(isr);
+		String valorCampo = br.readLine();
+		return valorCampo;
+	}
+
+}
