@@ -1,0 +1,34 @@
+package Muni;
+public class Profissional {
+
+	String ocupação;
+	String escolaridade;
+	String formação;
+	String localestudo;
+
+	public String getOcupação() {
+		return ocupação;
+	}
+	public void setOcupação(String ocupação) {
+		this.ocupação = ocupação;
+	}
+	public String getEscolaridade() {
+		return escolaridade;
+	}
+	public void setEscolaridade(String escolaridade) {
+		this.escolaridade = escolaridade;
+	}
+	public String getFormação() {
+		return formação;
+	}
+	public void setFormação(String formação) {
+		this.formação = formação;
+	}
+	public String getLocalestudo() {
+		return localestudo;
+	}
+	public void setLocalestudo(String localestudo) {
+		this.localestudo = localestudo;
+	}
+
+}
